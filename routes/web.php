@@ -18,6 +18,9 @@ Route::get('/prestation', function () {return view('prestation.prestation');})->
 Route::get('/prestation/particulier', function () {return view('prestation.particulier');})->name("particulier");
 Route::get('/prestation/entreprise', function () {return view('prestation.entreprise');})->name("entreprise");
 Route::get('/prestation/collectivite', function () {return view('prestation.collectivite');})->name("collectivite");
+Route::get('/deontologie', function () {return view('deontologie');})->name("deontologie");
+Route::get('/actualites', function () {return view('actualites');})->name("actualites");
+Route::get('/contact', function () {return view('contact');})->name("contact");
 
 Route::get('/test', function () {
     echo 'Bienvenue sur ma future API de test !';
