@@ -8,7 +8,7 @@
     <title>@yield('title')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
-    <link href="{{asset('css/main.css')}}" rel="stylesheet">
+    {{-- <link href="{{asset('css/main.css')}}" rel="stylesheet"> --}}
 </head>
 <body style="background-image: url({{asset('images/pic08.jpg')}});background-size: cover;">
 <header>
@@ -57,8 +57,8 @@
         @yield('content')
     </div>
     <footer class="bg-body-tertiary text-center text-lg-start">
-        <footer class="deneb_footer">
-            <div class="widget_wrapper" style="background-image: url({{asset('images/bg04.jpg')}});background-size: cover; color:white">
+        {{-- <div class="deneb_footer"> --}}
+            <div class="widget_wrapper py-3" style="background-image: url({{asset('images/bg04.jpg')}});background-size: cover; color:white">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-12">
@@ -123,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            <div class="copyright_area">
+            <div class="copyright_area bg-secondary bg-gradient"style="--bs-bg-opacity: .5;">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -134,7 +134,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        {{-- </div> --}}
         {{-- <div class="container col-4">
             <ul>
                 <li>Numéro de SIRET</li>
