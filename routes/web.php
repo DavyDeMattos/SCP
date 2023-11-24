@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {return view('accueil');})->name("accueil");
 Route::get('/prestation', function () {return view('prestation.prestation');})->name("prestation");
 Route::get('/prestation/particulier', function () {return view('prestation.particulier');})->name("particulier");
+Route::get('/prestation/particulier:famille', function () {return view('prestation.particulier.famille');})->name("particulier-famille");
 Route::get('/prestation/entreprise', function () {return view('prestation.entreprise');})->name("entreprise");
 Route::get('/prestation/collectivite', function () {return view('prestation.collectivite');})->name("collectivite");
 Route::get('/deontologie', function () {return view('deontologie');})->name("deontologie");
