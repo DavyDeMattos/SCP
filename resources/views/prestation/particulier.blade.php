@@ -12,7 +12,7 @@
             <h5 class="card-title">Affaires conjugales et familiales </h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="{{route("particulier-famille")}}" class="card-link">Card link</a>
+            <a href="{{route("particulier-famille")}}" class="card-link">Voir plus</a>
         </div>
     </div>
     <div class="card mb-2" style="width: 18rem;">
@@ -20,7 +20,7 @@
             <h5 class="card-title">Enquêtes de moralité</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Voir plus</a>
         </div>
     </div>
     <div class="card mb-2" style="width: 18rem;">
@@ -28,7 +28,7 @@
             <h5 class="card-title">Litiges immobiliers</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Voir plus</a>
         </div>
     </div>
     <div class="card mb-2" style="width: 18rem;">
@@ -36,7 +36,7 @@
             <h5 class="card-title">Contre-enquête pénale</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Voir plus</a>
         </div>
     </div>
     <div class="card mb-2" style="width: 18rem;">
@@ -44,7 +44,7 @@
             <h5 class="card-title">Disparition de personne</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Voir plus</a>
         </div>
     </div>
     <div class="card mb-2" style="width: 18rem;">
@@ -52,7 +52,7 @@
             <h5 class="card-title">Cyber-enquête / E-réputation</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Voir plus</a>
         </div>
     </div>
 </div>

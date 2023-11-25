@@ -7,7 +7,8 @@
         <h2>Présentation de l'agence SCP</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos accusamus corrupti tenetur distinctio dolore, suscipit officiis accusantium fugiat tempora quae omnis aliquid odit consequatur est, iste voluptates at minima! Accusantium atque minus nemo optio dolor mollitia quam officiis, aliquam architecto sapiente nobis fuga eius accusamus exercitationem reiciendis dicta aliquid, veritatis delectus asperiores, sit perspiciatis unde maiores? Harum beatae quo, qui repudiandae placeat corporis nam tempore quas praesentium. Exercitationem illum illo eaque, praesentium veritatis in veniam id aspernatur magnam quos quis temporibus repudiandae aut ea quia, non labore vero officiis corrupti. Animi blanditiis exercitationem culpa et neque, dolor molestias voluptatem magnam!</p>
     </div>
-    <div class="container bg-dark bg-gradient p-4">
+    {{-- TODO breakpoint sur les prestations --}}
+    <div class="container bg-dark bg-gradient p-4 rounded-1">
         <h2 class="text-light">Prestations</h2>
         <div class="row">
             <div class="col-sm-4 mb-3 mb-sm-0">
@@ -42,7 +43,7 @@
             </div>
         </div>
     </div>
-    <div class="container bg-secondary my-3 py-3">
+    <div class="container bg-secondary my-3 py-3 rounded-1" style="background-image: url({{asset('images/pic02.jpg')}});background-size: cover;">
         <h2 class="mb-3">Actualités</h2>
         <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-inner">

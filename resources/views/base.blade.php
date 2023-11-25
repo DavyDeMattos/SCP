@@ -12,7 +12,7 @@
 </head>
 <body style="background-image: url({{asset('images/pic08.jpg')}});background-size: cover;">
 <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-tertiary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-tertiary" data-bs-theme="dark" style="background-image: url({{asset('images/bg02.jpg')}});background-size: cover;">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{route("accueil")}}">
                 <img src="{{asset('images/logo_noir.png')}}" alt="Logo de l'agence" height="36">
