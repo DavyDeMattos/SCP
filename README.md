@@ -12,6 +12,7 @@ Projet de site internet demandé par l'agence SCP pour présenter son agences, s
     - [ ] Professionnels du droit (en attente)
     - [ ] Collectivités locales (en attente)
     - [ ] Associations (en attente)
+    - [ ] Faire page 404
   - [x] Page de réglementation et déontologie
   - [ ] Tarif ? (en attente)
   - [ ] Méthode
