@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Provider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProviderController extends Controller
 {
@@ -16,6 +17,17 @@ class ProviderController extends Controller
             'providers' => \App\Models\Provider::all()
         ]);
         // return \App\Models\Provider::all();
+    }
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function indexOfNames()
+    {
+        $providerNames = DB::select('
+        SELECT name, genre FROM providers'
+        );
+        return $providerNames;
     }
 
     /**

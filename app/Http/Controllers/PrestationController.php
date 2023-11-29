@@ -3,22 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Models\Prestation;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class PrestationController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(string $slug): View
     {
-        return \App\Models\Prestation::all();
-    }
-    public function prout()
-    {
-        // $prestations = Prestation::findOrFail('genre', 'entreprise');
-        // $freshPrestations = $prestations->fresh();
-        // return 'coucou';
+        $prestations = DB::select('
+        SELECT * FROM prestations
+        WHERE genre = "' . $slug . '"'
+        );
+        return view('prestation.show', [
+            'prestations' => $prestations
+        ]);
     }
 
 
