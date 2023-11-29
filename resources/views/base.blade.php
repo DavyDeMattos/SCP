@@ -26,7 +26,7 @@
                 <li >
                     <div class="btn-group">
                         {{-- <button type="button" class="btn btn-danger"><a class="nav-link" href="{{route("prestation")}}">Prestation</a></button> --}}
-                        <a class="btn nav-link" href="{{route("prestation")}}" role="button" aria-expanded="false">
+                        <a class="btn nav-link" href="{{route("prestation.index")}}" role="button" aria-expanded="false">
                             Prestations
                         </a>
                         <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PrestationController;
+use App\Http\Controllers\ProviderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {return view('accueil');})->name("accueil");
-Route::get('/prestation', function () {return view('prestation.prestation');})->name("prestation");
+// Route::get('/prestation', function () {return view('prestation.prestation');})->name("prestation");
 Route::get('/prestation/particulier', function () {return view('prestation.particulier');})->name("particulier");
 Route::get('/prestation/particulier/famille', function () {return view('prestation.particulier.famille');})->name("particulier-famille");
 Route::get('/prestation/entreprise', function () {return view('prestation.entreprise');})->name("entreprise");
@@ -35,14 +36,23 @@ Route::get('/test', function (Request $request) {
     return $prestation;
 });
 
-/* Route::prefix('/prestation')->name('prestation.')->controller(PrestationController::class)->group(function (){
+Route::prefix('/prestation')->name('prestation.')->controller(ProviderController::class)->group(function (){
     Route::get('/','index')->name('index');
 
-    Route::get('/{genre}/{id}', 'show')->where([
-        'id'=> '[0-9]+',
-        'genre'=>'[a-z0-9\-]+'
-    ])->name('show');
-});*/
+    // Route::get('/{genre}/{id}', 'show')->where([
+    //     'id'=> '[0-9]+',
+    //     'genre'=>'[a-z0-9\-]+'
+    // ])->name('show');
+});
+Route::prefix('/prestation')->name('prestation.')->controller(PrestationController::class)->group(function (){
+    Route::get('/{slug}','index')->name('show');
+    // Route::get('/{slug}/{id}','show')->name('show');
+    // Route::get('/{slug}/{id}', 'show')->where([
+    //     'id'=> '[0-9]+',
+    //     'slug'=>'[a-z0-9\-]+'
+    // ])->name('show');
+    Route::get('/test','prout')->name('prout');
+});
 /*Route::get('/test/1', function (Request $request) {
     $prestations = \App\Models\Prestation::findOrFail(1);
     dd($prestations);
@@ -64,6 +74,11 @@ Route::get('/test/create', function (Request $request) {
 Route::get('/test/delete/1', function (Request $request) {
     $prestations = \App\Models\Prestation::findOrFail(1);
     $prestations->delete();
+    // dd($prestations);
+    return $prestations;
+});
+Route::get('/test/prout', function (Request $request) {
+    $prestations = \App\Models\Prestation::where('genre', '=', 'particulier');
     // dd($prestations);
     return $prestations;
 });

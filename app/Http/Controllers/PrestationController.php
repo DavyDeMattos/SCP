@@ -14,6 +14,13 @@ class PrestationController extends Controller
     {
         return \App\Models\Prestation::all();
     }
+    public function prout()
+    {
+        // $prestations = Prestation::findOrFail('genre', 'entreprise');
+        // $freshPrestations = $prestations->fresh();
+        // return 'coucou';
+    }
+
 
     /**
      * Store a newly created resource in storage.
