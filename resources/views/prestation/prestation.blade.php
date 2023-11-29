@@ -9,29 +9,29 @@
     <div class="d-flex justify-content-around flex-wrap mt-2">
         <div class="card mb-2" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Domaine n°1</h5>
+              <h5 class="card-title">Particulier</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
+              <p class="card-text">Vous êtes un particulier ?</p>
+              <a href="#" class="card-link">Voilà ce qu'on peux faire pour vous...</a>
             </div>
         </div>
         <div class="card mb-2" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Domaine n°2</h5>
+              <h5 class="card-title">Entreprise</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
+              <p class="card-text">Vous êtes une entreprise ?</p>
+              <a href="#" class="card-link">Voir plus</a>
             </div>
         </div>
         <div class="card mb-2" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Domaine n°3</h5>
+              <h5 class="card-title">Collectivité</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
+              <p class="card-text">Vous êtes une collectivité ?</p>
+              <a href="#" class="card-link">Voir les prestations</a>
             </div>
         </div>
-        <div class="card mb-2" style="width: 18rem;">
+        {{-- <div class="card mb-2" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Domaine n°4</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
@@ -70,6 +70,6 @@
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="#" class="card-link">Card link</a>
             </div>
-        </div>
+        </div> --}}
     </div>
 @endsection

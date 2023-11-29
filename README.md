@@ -15,16 +15,20 @@ Projet de site internet demandé par l'agence SCP pour présenter son agences, s
     - [ ] Faire page 404
   - [x] Page de réglementation et déontologie
   - [ ] Tarif ? (en attente)
-  - [ ] Méthode
+  - [ ] Actualités / Méthode
     - [ ] Ajout d'un article via le back office
-  - [x] Contact
+  - [ ] Contact
+    - [ ] **JS** Au clic, faire défiler vers le bas de page
   - [ ] Ajout d'un carte
     - [ ]  Google Maps (voir "Open Street Maps")
     - [ ]  En dur ?
-  - [x] Formulaire de contact
+  - [ ] Formulaire de contact
+    - [ ] Incorporer formulaire dans "footer"
     - [ ] Formulaire fonctionnelle + envoi d'un mail
     - [ ] S'assurer de la protection (injection SQL toussa toussa)
   - [ ] Police d'écriture pour les titres -> **ITC bauhaus bold**
+  - [ ] CGU
+  - [ ] Mentions légales
 - [ ] S'assurer sur le responsive
 - [ ] Incorporer le système d'articles modifiable via la BDD
 - [ ] Faire un backend ?

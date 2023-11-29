@@ -8,11 +8,11 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos accusamus corrupti tenetur distinctio dolore, suscipit officiis accusantium fugiat tempora quae omnis aliquid odit consequatur est, iste voluptates at minima! Accusantium atque minus nemo optio dolor mollitia quam officiis, aliquam architecto sapiente nobis fuga eius accusamus exercitationem reiciendis dicta aliquid, veritatis delectus asperiores, sit perspiciatis unde maiores? Harum beatae quo, qui repudiandae placeat corporis nam tempore quas praesentium. Exercitationem illum illo eaque, praesentium veritatis in veniam id aspernatur magnam quos quis temporibus repudiandae aut ea quia, non labore vero officiis corrupti. Animi blanditiis exercitationem culpa et neque, dolor molestias voluptatem magnam!</p>
     </div>
     {{-- TODO breakpoint sur les prestations --}}
-    <div class="container bg-dark bg-gradient p-4 rounded-1">
+    <div class="container text-center bg-dark bg-gradient p-4 rounded-1">
         <h2 class="text-light">Prestations</h2>
-        <div class="row">
-            <div class="col-sm-4 mb-3 mb-sm-0">
-                <div class="card mx-auto" style="width: 18rem;">
+        <div class="row justify-content-md-center ">
+            <div class="col-md-4 col-sm-12 mb-3">
+                <div class="card mx-auto">
                     <img src="https://i0.wp.com/assotgb.org/wp-content/uploads/2018/09/particulier_icon_circular.png?w=512&ssl=1" class="card-img-top" alt="Photo représentant les particuliers">
                     <div class="card-body">
                       <h5 class="card-title">Particulier</h5>
@@ -21,9 +21,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 mb-3 mb-sm-0">
-                <div class="card mx-auto" style="width: 18rem;">
-                    <img src="https://www.lafrancequiose.fr/wp-content/uploads/2021/12/presentation-d-entreprise-1024x571.jpg" class="card-img-top py-auto" alt="Photo représentant les entreprises">
+            <div class="col-md-4 col-sm-12 mb-3">
+                <div class="card mx-auto">
+                    <img src="https://www.lafrancequiose.fr/wp-content/uploads/2021/12/presentation-d-entreprise-1024x571.jpg" class="card-img-top" alt="Photo représentant les entreprises">
                     <div class="card-body">
                       <h5 class="card-title">Entreprise</h5>
                       <p class="card-text">Si vous êtes une entreprise, vous êtes concerné par cette section.</p>
@@ -31,8 +31,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 mb-3 mb-sm-0">
-                <div class="card mx-auto" style="width: 18rem;">
+            <div class="col-md-4 col-sm-12 mb-3">
+                <div class="card mx-auto">
                     <img src="https://www.point-comm.fr/images/point_comm/metier-consultant-collectivite-locale.jpg" class="card-img-top" alt="Photo représentant les collectivités">
                     <div class="card-body">
                       <h5 class="card-title">Collectivités</h5>
@@ -47,9 +47,9 @@
         <h2 class="mb-3">Actualités</h2>
         <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                {{-- <div class="carousel-item active">
                     <div class="card-wrapper container-sm d-flex  justify-content-around">
-                        <div class="card  " style="width: 18rem;">
+                        <div class="card" style="width: 18rem;">
                             <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
@@ -72,7 +72,6 @@
                 <div class="carousel-item">
                     <div class="card-wrapper container-sm d-flex  justify-content-around">
                         <div class="card  " style="width: 18rem;">
-                            {{-- <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="..."> --}}
                             <div class="card-body">
                                 <h5 class="card-title">Voici l'article n°4</h5>
                                 <h6 class="card-subtitle mb-2 text-body-secondary">Comment les canards dominent le monde</h6>
@@ -81,7 +80,6 @@
                             </div>
                         </div>
                         <div class="card" style="width: 18rem;">
-                            {{-- <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="..."> --}}
                             <div class="card-body">
                                 <h5 class="card-title">Voici l'article n°5</h5>
                                 <h6 class="card-subtitle mb-2 text-body-secondary">Est-ce vrai que se brosser les dents augmente la taille des lobes d'oreilles ?</h6>
@@ -90,7 +88,6 @@
                             </div>
                         </div>
                         <div class="card" style="width: 18rem;">
-                            {{-- <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="..."> --}}
                             <div class="card-body">
                                 <h5 class="card-title">Voici l'article n°6</h5>
                                 <h6 class="card-subtitle mb-2 text-body-secondary">Le MEURTRE ! </h6>
@@ -99,10 +96,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
+                </div> --}}
+                <div class="carousel-item active">
                     <div class="card-wrapper container-sm d-flex  justify-content-around">
-                        <div class="card  " style="width: 18rem;">
+                        <div class="card ">
                             <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Voici l'article n°7</h5>
@@ -110,7 +107,7 @@
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
-                        <div class="card" style="width: 18rem;">
+                        <div class="card">
                             <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Voici l'article n°8</h5>
@@ -118,7 +115,7 @@
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
-                        <div class="card" style="width: 18rem;">
+                        <div class="card">
                             <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Voici l'article n°9</h5>
