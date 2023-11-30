@@ -9,10 +9,13 @@
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
 </head>
 <body style="background-image: url({{asset('images/pic08.jpg')}});background-size: cover;">
-    @inject('provider', 'App\Http\Controllers\ProviderController')
-    @php
-        $providerNames = $provider->indexOfNames()
-    @endphp
+
+@inject('provider', 'App\Http\Controllers\ProviderController')
+@php
+    $providerNames = $provider->indexOfNames();
+    $routeName = request()->route()->getName();
+@endphp
+
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-tertiary" data-bs-theme="dark" style="background-image: url({{asset('images/bg02.jpg')}});background-size: cover;">
         <div class="container-fluid">
@@ -26,7 +29,7 @@
             <ul class="navbar-nav">
                 <li >
                     <div class="btn-group">
-                        <a class="btn nav-link" href="{{route("prestation.index")}}" role="button" aria-expanded="false">
+                        <a @class(['btn nav-link', 'active' => str_starts_with($routeName, 'prestation')]) href="{{route("prestation.index")}}" role="button" aria-expanded="false">
                             Prestations
                         </a>
                         <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,13 +43,13 @@
                       </div>
                   </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route("deontologie")}}">Déontologie</a>
+                    <a @class(['btn nav-link', 'active' => str_starts_with($routeName, 'deontologie')]) href="{{route("deontologie")}}">Déontologie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route("actualites")}}">Actualités</a>
+                    <a @class(['btn nav-link', 'active' => str_starts_with($routeName, 'actualites')]) href="{{route("actualites")}}">Actualités</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route("contact")}}">Contact</a>
+                    <a @class(['btn nav-link', 'active' => str_starts_with($routeName, 'contact')]) href="{{route("contact")}}">Contact</a>
                 </li>
             </ul>
             </div>

@@ -49,14 +49,15 @@ Route::prefix('/prestation')->name('prestation.')->controller(ProviderController
 });
 Route::prefix('/prestation')->name('prestation.')->controller(PrestationController::class)->group(function (){
     Route::get('/{slug}','index')->where(['slug'=>'[a-z0-9\-]+'])->name('show');
-    // Route::get('/{slug}/{id}', 'show')->where([
-    //     'id'=> '[0-9]+',
-    //     'slug'=>'[a-z0-9\-]+'
-    // ])->name('show');
+    Route::get('/{genre}/{id}_{slug}', 'show')->where([
+        'genre'=> '[a-z0-9\-]+',
+        'id'=> '[0-9]+',
+        'slug'=>'[a-z0-9\-]+'
+    ])->name('prestation-show');
     // Route::get('/test','index')->name('prout');
 });
 
-Route::get('/test/create', function (Request $request) {
+/*Route::get('/test/create', function (Request $request) {
     $prestations = \App\Models\Prestation::create([
         'title' => 'Enquêtes de moralité',
         'sub_title' => 'Combien de chaton a-t-il tué ?',
@@ -65,7 +66,7 @@ Route::get('/test/create', function (Request $request) {
         'content' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laborum inventore ratione praesentium fugit possimus dolorum magni iure enim voluptates!'
     ]);
     return $prestations;
-});
+});*/
 
 // Route::get('/test/delete/1', function (Request $request) {
 //     $prestations = \App\Models\Prestation::findOrFail(1);
