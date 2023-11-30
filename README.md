@@ -8,9 +8,9 @@ Projet de site internet demandé par l'agence SCP pour présenter son agences, s
   - [x] Page d'accueil
   - [x] Pages des prestations
     - [x] Particuliers
-    - [ ] Entreprises
+    - [x] Entreprises
     - [ ] Professionnels du droit (en attente)
-    - [ ] Collectivités locales (en attente)
+    - [x] Collectivités locales
     - [ ] Associations (en attente)
     - [ ] Faire page 404
   - [x] Page de réglementation et déontologie
