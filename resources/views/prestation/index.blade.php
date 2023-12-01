@@ -6,7 +6,7 @@
         <h1>Ici la présentation des prestations</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quia amet sed neque cum, aspernatur tempore nihil facilis velit quos delectus et libero corporis similique optio a. Voluptates quia consequuntur possimus aspernatur ab, deserunt a quam laborum totam tenetur nemo perspiciatis mollitia in inventore quod dignissimos omnis quo ratione suscipit hic odio voluptatem sed ipsum? Porro optio voluptatibus eveniet temporibus beatae voluptates iusto modi esse, repudiandae inventore enim nemo labore doloremque voluptate obcaecati impedit consectetur nulla rem iure possimus quas quos magnam laudantium? Neque, obcaecati debitis distinctio suscipit, corporis quibusdam unde blanditiis cupiditate harum placeat facere repellendus ea recusandae quidem.</p>
     </div>
-    <div class="d-flex justify-content-around flex-wrap mt-2">
+    <div class="d-flex justify-content-around flex-wrap mt-2 p-md-5">
         @foreach ($providers as $provider)
             <div class="card mb-2" style="width: 18rem;">
                 <div class="card-body">

@@ -12,6 +12,7 @@ class PrestationController extends Controller
     /**
      * Display a listing of the resource.
      * @param string $slug
+     * @return View
      */
     public function index(string $slug): View
     {
@@ -38,6 +39,10 @@ class PrestationController extends Controller
 
     /**
      * Display the specified resource.
+     * @param string $genre
+     * @param int $id
+     * @param string $slug
+     * @return View
      */
     public function show(string $genre, int $id, string $slug): RedirectResponse | View
     {
