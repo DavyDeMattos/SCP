@@ -49,7 +49,7 @@
                     <a @class(['btn nav-link', 'active' => str_starts_with($routeName, 'actualites')]) href="{{route("actualites")}}">Actualités</a>
                 </li>
                 <li class="nav-item">
-                    <a @class(['btn nav-link', 'active' => str_starts_with($routeName, 'contact')]) href="{{route("contact")}}">Contact</a>
+                    <a @class(['btn nav-link', 'active' => str_starts_with($routeName, 'mail/contact')]) href="{{route("mail.contact")}}">Contact</a>
                 </li>
             </ul>
             </div>
@@ -110,7 +110,7 @@
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="15" placeholder="Laissez nous un message"></textarea>
                                 </div>
                             </div>
-                            <button type="submit" class="col-lg-4 col-12 btn btn-outline-light btn-lg btn-block">Submit</button>
+                            <button type="submit" class="col-lg-4 col-12 btn btn-outline-light btn-lg btn-block"><a href="{{ route('mail.submit')}}">Submit</a></button>
                         </div>
                         {{-- <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="widget widget_link">

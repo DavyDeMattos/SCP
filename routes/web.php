@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PrestationController;
 use App\Http\Controllers\ProviderController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -26,7 +27,7 @@ Route::get('/', function () {return view('accueil');})->name("accueil");
 */
 Route::get('/deontologie', function () {return view('deontologie');})->name("deontologie");
 Route::get('/actualites', function () {return view('actualites');})->name("actualites");
-Route::get('/contact', function () {return view('contact');})->name("contact");
+// Route::get('/contact', function () {return view('contact');})->name("contact");
 
 Route::get('/test', function (Request $request) {
     $prestation = new \App\Models\Prestation();
@@ -56,7 +57,11 @@ Route::prefix('/prestation')->name('prestation.')->controller(PrestationControll
     ])->name('prestation-show');
     // Route::get('/test','index')->name('prout');
 });
+Route::prefix('/mail')->name('mail.')->controller(ContactController::class)->group(function (){
+    Route::get('/contact', function () {return view('contact');})->name("contact");
+    Route::post('/contact','submit')->name('submit');
 
+});
 /*Route::get('/test/create', function (Request $request) {
     $prestations = \App\Models\Prestation::create([
         'title' => 'Enquêtes de moralité',
