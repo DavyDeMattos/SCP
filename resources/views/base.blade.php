@@ -62,7 +62,7 @@
     <footer class="bg-body-tertiary text-center text-lg-start">
         <div class="widget_wrapper py-3" style="background-image: url({{asset('images/bg04.jpg')}});background-size: cover; color:white">
             <div class="container">
-                <form action="" method="POST">
+                {{-- <form action="" method="POST">
                     <div class="row d-flex align-items-center">
                         <div class="col-lg-4 col-md-6 col-12">
                             <select class="form-select" aria-label="Client Type">
@@ -82,11 +82,9 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                {{-- <label for="inputMail" class="form-label"></label> --}}
                                 <input type="email" class="form-control" id="inputMail" placeholder="Votre adresse mail" aria-label="E-Mail">
                             </div>
                             <div class="mb-3">
-                                {{-- <label for="inputPhone" class="form-label"></label> --}}
                                 <input type="tel" class="form-control" id="inputPhone" placeholder="Votre numéro de téléphone"  aria-label="Phone number">
                             </div>
                             <select class="form-select mb-2" multiple aria-label="When contact">
@@ -112,19 +110,105 @@
                             </div>
                             <button type="submit" class="col-lg-4 col-12 btn btn-outline-light btn-lg btn-block"><a href="{{ route('mail.submit')}}">Submit</a></button>
                         </div>
-                        {{-- <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="widget widget_link">
-                                <div class="widget_title">
-                                    <h4>Liens</h4>
+                    </div>
+                </form> --}}
+                {{-- <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="widget widget_link">
+                        <div class="widget_title">
+                            <h4>Liens</h4>
+                        </div>
+                        <ul>
+                            <li><a href="#">A propos de nous</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Actualités</a></li>
+                            <li><a href="#">Nous contacter</a></li>
+                        </ul>
+                    </div>
+                </div> --}}
+                <form action="{{route("mail.submit")}}" method="POST">
+                    @csrf
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <label for="clientType" class="form-label">Vous êtes</label>
+                            <select name="clientType" id="clientType" class="form-select" aria-label="Client Type">
+                                <option value="particulier">Particulier</option>
+                                <option value="entreprise">Entreprise</option>
+                                <option value="collectivité">Collectivité</option>
+                            </select>
+                            <div class="row">
+                                <div class="mb-3 col-6">
+                                    <label for="inputName" class="form-label"></label>
+                                    <input type="text" name="lastName" class="form-control" id="inputName" placeholder="Votre nom de famille" aria-label="Last name">
                                 </div>
-                                <ul>
-                                    <li><a href="#">A propos de nous</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Actualités</a></li>
-                                    <li><a href="#">Nous contacter</a></li>
-                                </ul>
+                                <div class="mb-3 col-6">
+                                    <label for="inputFirstname" class="form-label"></label>
+                                    <input type="text" name="firstName" class="form-control" id="inputFirstname" placeholder="Votre prénom"  aria-label="First name">
+                                </div>
                             </div>
-                        </div> --}}
+                            <div class="mb-3">
+                                <input type="email" name="mail" class="form-control" id="inputMail" placeholder="Votre adresse mail" aria-label="E-Mail">
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" name="phoneNumber" class="form-control" id="inputPhone" placeholder="Votre numéro de téléphone"  aria-label="Phone number">
+                            </div>
+                            <label for="timeContact" class="form-label">Quand voulez-vous être contacté ?</label>
+                            <div>
+                                <div class="form-check  form-check-inline">
+                                    <input name="timeContact-morning" class="form-check-input" type="checkbox" value="matin" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Matin
+                                    </label>
+                                </div>
+                                <div class="form-check  form-check-inline">
+                                    <input name="timeContact-afternoon" class="form-check-input" type="checkbox" value="apres-midi" id="defaultCheck2">
+                                    <label class="form-check-label" for="defaultCheck2">
+                                        Après-midi
+                                    </label>
+                                </div>
+                                <div class="form-check  form-check-inline">
+                                    <input name="timeContact-evening" class="form-check-input" type="checkbox" value="soir" id="defaultCheck3">
+                                    <label class="form-check-label" for="defaultCheck3">
+                                        Soir
+                                    </label>
+                                </div>
+                                <div class="form-check  form-check-inline">
+                                    <input name="timeContact-night" class="form-check-input" type="checkbox" value="nuit" id="defaultCheck4">
+                                    <label class="form-check-label" for="defaultCheck4">
+                                        Nuit
+                                    </label>
+                                </div>
+                            </div>
+                            <label for="howContact" class="form-label">Mode de contact privilégié</label>
+                            <div>
+                                <div class="form-check  form-check-inline">
+                                    <input name="howContact-telephone" class="form-check-input" type="checkbox" value="telephone" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Téléphone
+                                    </label>
+                                </div>
+                                <div class="form-check  form-check-inline">
+                                    <input name="howContact-mail" class="form-check-input" type="checkbox" value="mail" id="defaultCheck2">
+                                    <label class="form-check-label" for="defaultCheck2">
+                                        Mail
+                                    </label>
+                                </div>
+                                <div class="form-check  form-check-inline">
+                                    <input name="howContact-Face" class="form-check-input" type="checkbox" value="face-a-face" id="defaultCheck3">
+                                    <label class="form-check-label" for="defaultCheck3">
+                                        Face-à-face
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap align-items-center justify-content-around col-lg-8 col-md-6 col-12">
+                            <div class="col-lg-7 col-md-12 col-12 ">
+                                <div class="form-group mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                                    <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="15" placeholder="Laissez nous un message"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="col-lg-4 col-12 btn bg-primary-subtle btn-lg btn-block">Submit</button>
+                        </div>
                     </div>
                 </form>
             </div>
