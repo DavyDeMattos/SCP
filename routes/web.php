@@ -25,7 +25,7 @@ Route::get('/', function () {return view('accueil');})->name("accueil");
     Route::get('/prestation/entreprise', function () {return view('prestation.entreprise');})->name("entreprise");
     Route::get('/prestation/collectivite', function () {return view('prestation.collectivite');})->name("collectivite");
 */
-Route::get('/deontologie', function () {return view('deontologie');})->name("deontologie");
+Route::get('/reglementation', function () {return view('reglementation');})->name("reglementation");
 Route::get('/actualites', function () {return view('actualites');})->name("actualites");
 // Route::get('/contact', function () {return view('contact');})->name("contact");
 
@@ -58,7 +58,7 @@ Route::prefix('/prestation')->name('prestation.')->controller(PrestationControll
     // Route::get('/test','index')->name('prout');
 });
 Route::prefix('/mail')->name('mail.')->controller(ContactController::class)->group(function (){
-    Route::get('/contact', function () {return view('contact');})->name("contact");
+    // Route::get('/contact', function () {return view('contact');})->name("contact");
     Route::post('/contact','submit')->name('submit');
 
 });

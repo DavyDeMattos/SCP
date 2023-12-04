@@ -5,7 +5,8 @@
     <h1>Ici l'accueil</h1>
     <div class="container">
         <h2>Présentation de l'agence SCP</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos accusamus corrupti tenetur distinctio dolore, suscipit officiis accusantium fugiat tempora quae omnis aliquid odit consequatur est, iste voluptates at minima! Accusantium atque minus nemo optio dolor mollitia quam officiis, aliquam architecto sapiente nobis fuga eius accusamus exercitationem reiciendis dicta aliquid, veritatis delectus asperiores, sit perspiciatis unde maiores? Harum beatae quo, qui repudiandae placeat corporis nam tempore quas praesentium. Exercitationem illum illo eaque, praesentium veritatis in veniam id aspernatur magnam quos quis temporibus repudiandae aut ea quia, non labore vero officiis corrupti. Animi blanditiis exercitationem culpa et neque, dolor molestias voluptatem magnam!</p>
+        <p>L’Agence S.C.P est spécialisée dans le renseignement, la recherche et la collecte de preuves. Diplomé de l’Ecole Supérieure des Agents de Recherches Privées (l’ESARP) et agréé par le Conseil National des Activités Privées de Sécurité (CNAPS, Établissement publique sous tutelle du Ministère de l’Intérieur), les Agents de Recherches Privées « Détectives privés » sommes aujourd’hui très <a href="{{route("reglementation")}}">réglementés</a> dans l’exercice de notre activité. </p>
+        <p>Implantés dans le Loir-et-Cher (41), nous intervenons 24h/24 et 7j/7 dans l’ensemble de la région Centre afin de défendre les intérêts de nos clients devant une juridiction ; qu’ils soient des particuliers, des professionnels ou des collectivités ; ou uniquement pour lever tout doute sur une situation devenue insupportable.</p>
     </div>
     {{-- TODO breakpoint sur les prestations --}}
     <div class="container text-center bg-dark bg-gradient p-4 rounded-1">
@@ -17,7 +18,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Particulier</h5>
                       <p class="card-text">Si vous êtes un particulier, vous êtes concerné par cette section.</p>
-                      <a href="#" class="btn btn-primary">Aller voir les prestations</a>
+                      <a href="{{route("prestation.show", [ "slug" => "particulier" ])}}" class="btn btn-primary">Aller voir les prestations</a>
                     </div>
                 </div>
             </div>
@@ -27,7 +28,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Entreprise</h5>
                       <p class="card-text">Si vous êtes une entreprise, vous êtes concerné par cette section.</p>
-                      <a href="#" class="btn btn-primary">Aller voir les prestations</a>
+                      <a href="{{route("prestation.show", [ "slug" => "entreprise" ])}}" class="btn btn-primary">Aller voir les entreprises</a>
                     </div>
                 </div>
             </div>
@@ -37,7 +38,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Collectivités</h5>
                       <p class="card-text">Si vous êtes une collectivité, vous êtes concerné par cette section.</p>
-                      <a href="#" class="btn btn-primary">Aller voir les prestations</a>
+                      <a href="{{route("prestation.show", [ "slug" => "collectivite" ])}}" class="btn btn-primary">Aller voir les collectivités</a>
                     </div>
                 </div>
             </div>

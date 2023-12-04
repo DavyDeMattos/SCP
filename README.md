@@ -13,24 +13,29 @@ Projet de site internet demandé par l'agence SCP pour présenter son agences, s
     - [x] Collectivités locales
     - [ ] Associations (en attente)
     - [ ] Faire page 404
+    - [ ] Ajout images
+      - [ ] Liens avec BDD
+      - [ ] Placer images dans public/assets
   - [x] Page de réglementation et déontologie
   - [ ] Tarif ? (en attente)
   - [ ] Actualités / Méthode
     - [ ] Ajout d'un article via le back office
   - [ ] Contact
     - [ ] **JS** Au clic, faire défiler vers le bas de page
-  - [ ] Ajout d'un carte
-    - [ ]  Google Maps (voir "Open Street Maps")
-    - [ ]  En dur ?
+  - [ ] Page zones d'intervention
+    - [ ] Ajout d'un carte
+      - [ ]  Google Maps (voir "Open Street Maps")
+      - [ ]  En dur ?
   - [ ] Formulaire de contact
-    - [ ] Incorporer formulaire dans "footer"
+    - [x] Incorporer formulaire dans "footer"
     - [ ] Formulaire fonctionnelle + envoi d'un mail
     - [ ] S'assurer de la protection (injection SQL toussa toussa)
+  - [ ] Augmenter taille logo
   - [ ] Police d'écriture pour les titres -> **ITC bauhaus bold**
   - [ ] CGU
   - [ ] Mentions légales
 - [ ] S'assurer sur le responsive
-- [ ] Incorporer le système d'articles modifiable via la BDD
+- [x] Incorporer le système d'articles modifiable via la BDD
 - [ ] Faire un backend ?
   - [ ] Authentification
   - [ ] Bouton de lien / URL
