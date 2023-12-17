@@ -53,7 +53,7 @@
                     <a @class(['btn nav-link', 'active' => str_starts_with($routeName, 'actualites')]) href="{{route("actualites")}}">Zones d'interventions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn nav-link" href="">Contact</a>
+                    <a class="btn nav-link" href="#form-contact">Contact</a>
                     {{-- <a @class(['btn nav-link', 'active' => str_starts_with($routeName, 'mail/contact')]) href="{{route("mail.contact")}}">Contact</a> --}}
                 </li>
             </ul>
@@ -64,10 +64,10 @@
     <div class="container text-center  mt-5 pt-5">
         @yield('content')
     </div>
-    <footer class="bg-body-tertiary text-center text-lg-start">
+    <footer class="bg-body-tertiary text-center text-lg-start" id="footer">
         <div class="widget_wrapper py-3" style="background-image: url({{asset('images/bg04.jpg')}});background-size: cover; color:white">
             <div class="container">
-                <form action="{{route("mail.submit")}}" method="POST">
+                <form action="{{route("mail.submit")}}" method="POST" id="form-contact">
                     @csrf
                     <div class="row d-flex align-items-center">
                         <div class="col-lg-4 col-md-6 col-12">
@@ -96,25 +96,25 @@
                             <label for="timeContact" class="form-label">Quand voulez-vous être contacté ?</label>
                             <div>
                                 <div class="form-check  form-check-inline">
-                                    <input name="timeContact-morning" class="form-check-input" type="checkbox" value="matin" id="defaultCheck1">
+                                    <input name="timeContactMorning" class="form-check-input" type="checkbox" value="matin" id="defaultCheck1">
                                     <label class="form-check-label" for="defaultCheck1">
                                         Matin
                                     </label>
                                 </div>
                                 <div class="form-check  form-check-inline">
-                                    <input name="timeContact-afternoon" class="form-check-input" type="checkbox" value="apres-midi" id="defaultCheck2">
+                                    <input name="timeContactAfternoon" class="form-check-input" type="checkbox" value="apres-midi" id="defaultCheck2">
                                     <label class="form-check-label" for="defaultCheck2">
                                         Après-midi
                                     </label>
                                 </div>
                                 <div class="form-check  form-check-inline">
-                                    <input name="timeContact-evening" class="form-check-input" type="checkbox" value="soir" id="defaultCheck3">
+                                    <input name="timeContactEvening" class="form-check-input" type="checkbox" value="soir" id="defaultCheck3">
                                     <label class="form-check-label" for="defaultCheck3">
                                         Soir
                                     </label>
                                 </div>
                                 <div class="form-check  form-check-inline">
-                                    <input name="timeContact-night" class="form-check-input" type="checkbox" value="nuit" id="defaultCheck4">
+                                    <input name="timeContactNight" class="form-check-input" type="checkbox" value="nuit" id="defaultCheck4">
                                     <label class="form-check-label" for="defaultCheck4">
                                         Nuit
                                     </label>
@@ -123,19 +123,19 @@
                             <label for="howContact" class="form-label">Mode de contact privilégié</label>
                             <div>
                                 <div class="form-check  form-check-inline">
-                                    <input name="howContact-telephone" class="form-check-input" type="checkbox" value="telephone" id="defaultCheck1">
+                                    <input name="howContactTelephone" class="form-check-input" type="checkbox" value="telephone" id="defaultCheck1">
                                     <label class="form-check-label" for="defaultCheck1">
                                         Téléphone
                                     </label>
                                 </div>
                                 <div class="form-check  form-check-inline">
-                                    <input name="howContact-mail" class="form-check-input" type="checkbox" value="mail" id="defaultCheck2">
+                                    <input name="howContactMail" class="form-check-input" type="checkbox" value="mail" id="defaultCheck2">
                                     <label class="form-check-label" for="defaultCheck2">
                                         Mail
                                     </label>
                                 </div>
                                 <div class="form-check  form-check-inline">
-                                    <input name="howContact-Face" class="form-check-input" type="checkbox" value="face-a-face" id="defaultCheck3">
+                                    <input name="howContactFace" class="form-check-input" type="checkbox" value="face-a-face" id="defaultCheck3">
                                     <label class="form-check-label" for="defaultCheck3">
                                         Face-à-face
                                     </label>
