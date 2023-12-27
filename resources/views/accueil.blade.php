@@ -1,5 +1,8 @@
 @extends('base')
-@section('title', "Agence SCP")
+@section('title', "Agence SCP | Accueil")
+{{-- TODO Changer description et Keywords --}}
+@section('description', "Agence SCP. Détective privé au service de ses clients")
+@section('keywords', "Détective privé, prestation particulier, prestation entreprise, prestation collectivité")
 
 @section('content')
     <h1>Ici l'accueil</h1>
@@ -16,7 +19,7 @@
                 <div class="card mx-auto">
                     <img src="https://i0.wp.com/assotgb.org/wp-content/uploads/2018/09/particulier_icon_circular.png?w=512&ssl=1" class="card-img-top" alt="Photo représentant les particuliers">
                     <div class="card-body">
-                      <h5 class="card-title">Particulier</h5>
+                      <h3 class="card-title">Particulier</h3>
                       <p class="card-text">Si vous êtes un particulier, vous êtes concerné par cette section.</p>
                       <a href="{{route("prestation.show", [ "slug" => "particulier" ])}}" class="btn btn-primary">Aller voir les prestations</a>
                     </div>
@@ -26,7 +29,7 @@
                 <div class="card mx-auto">
                     <img src="https://www.lafrancequiose.fr/wp-content/uploads/2021/12/presentation-d-entreprise-1024x571.jpg" class="card-img-top" alt="Photo représentant les entreprises">
                     <div class="card-body">
-                      <h5 class="card-title">Entreprise</h5>
+                      <h3 class="card-title">Entreprise</h3>
                       <p class="card-text">Si vous êtes une entreprise, vous êtes concerné par cette section.</p>
                       <a href="{{route("prestation.show", [ "slug" => "entreprise" ])}}" class="btn btn-primary">Aller voir les entreprises</a>
                     </div>
@@ -36,7 +39,7 @@
                 <div class="card mx-auto">
                     <img src="https://www.point-comm.fr/images/point_comm/metier-consultant-collectivite-locale.jpg" class="card-img-top" alt="Photo représentant les collectivités">
                     <div class="card-body">
-                      <h5 class="card-title">Collectivités</h5>
+                      <h3 class="card-title">Collectivités</h3>
                       <p class="card-text">Si vous êtes une collectivité, vous êtes concerné par cette section.</p>
                       <a href="{{route("prestation.show", [ "slug" => "collectivite" ])}}" class="btn btn-primary">Aller voir les collectivités</a>
                     </div>
@@ -48,62 +51,12 @@
         <h2 class="mb-3">Actualités</h2>
         <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                {{-- <div class="carousel-item active">
-                    <div class="card-wrapper container-sm d-flex  justify-content-around">
-                        <div class="card" style="width: 18rem;">
-                            <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="card-wrapper container-sm d-flex  justify-content-around">
-                        <div class="card  " style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Voici l'article n°4</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Comment les canards dominent le monde</h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo iure itaque alias dolorem non temporibus maxime, ut facilis sapiente dolore.</p>
-                                <a href="#" class="card-link">Card link</a>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Voici l'article n°5</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Est-ce vrai que se brosser les dents augmente la taille des lobes d'oreilles ?</h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo iure itaque alias dolorem non temporibus maxime, ut facilis sapiente dolore.</p>
-                                <a href="#" class="card-link">Card link</a>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Voici l'article n°6</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Le MEURTRE ! </h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo iure itaque alias dolorem non temporibus maxime, ut facilis sapiente dolore.</p>
-                                <a href="#" class="card-link">Card link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
                 <div class="carousel-item active">
                     <div class="card-wrapper container-sm d-flex  justify-content-around">
                         <div class="card ">
                             <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Voici l'article n°7</h5>
+                                <h3 class="card-title">Voici l'article n°7</h3>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
@@ -111,7 +64,7 @@
                         <div class="card">
                             <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Voici l'article n°8</h5>
+                                <h3 class="card-title">Voici l'article n°8</h3>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
@@ -119,7 +72,7 @@
                         <div class="card">
                             <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Voici l'article n°9</h5>
+                                <h3 class="card-title">Voici l'article n°9</h3>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>

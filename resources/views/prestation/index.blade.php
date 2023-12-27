@@ -1,5 +1,7 @@
 @extends('base')
-@section('title', "Prestation")
+@section('title', "Agence SCP | Prestation")
+@section('description', "Agence SCP. Détective privé au service de ses clients")
+@section('keywords', "Détective privé, prestation particulier, prestation entreprise, prestation collectivité")
 
 @section('content')
 {{-- @dd($providers) --}}

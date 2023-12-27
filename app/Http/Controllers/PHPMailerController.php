@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -37,6 +39,28 @@ class PHPMailerController extends Controller
         $howContactFace = $request->howContactFace;
         $content = $request->content;
 
+        $timeContact = [
+            'timeContactMorning' =>$timeContactMorning,
+            'timeContactAfternoon' =>$timeContactAfternoon,
+            'timeContactEvening' =>$timeContactEvening,
+            'timeContactNight' =>$timeContactNight,
+        ];
+        $howContact = [
+            'howContactTelephone' =>$howContactTelephone,
+            'howContactMail' =>$howContactMail,
+            'howContactFace' =>$howContactFace,
+        ];
+
+        $data = [
+            'clientType' =>$clientType,
+            'lastName' =>$lastName,
+            'firstName' =>$firstName,
+            'mailClient' =>$mailClient,
+            'phoneNumber' =>$phoneNumber,
+            'timeContact' =>$timeContact,
+            'howContact' =>$howContact,
+            'content' =>$content,
+        ];
 
         // Email server settings
         $mail->SMTPDebug = 0;
@@ -63,13 +87,26 @@ class PHPMailerController extends Controller
 
 
         $mail->isHTML(true);                // Set email content format to HTML
-
         $mail->Subject = 'Contact via PHPMailer';
-        $mail->Body    = $request->content;
+        /*$mail->Body    = '
+            <h1>Contact Details:</h1>
+            <ul>
+                <li><p><strong>Type de client:</strong> ' . $clientType . '</p></li>
+                <li><p><strong>Nom:</strong> ' . $lastName . '</p></li>
+                <li><p><strong>Prénom:</strong> ' . $firstName . '</p></li>
+                <li><p><strong>Adresse mail:</strong> <a href="mailto:' . $mailClient . '">' . $mailClient . '</a></p></li>
+                <li><p><strong>Numéro de téléphone:</strong> <a href="tel:' . $phoneNumber . '">' . $phoneNumber . '</a></p></li>
+                <li><p><strong>Je préfère être contacté :</strong>' . $timeContactMorning .','. $timeContactAfternoon .','. $timeContactEvening .','. $timeContactNight. '</li>
+                <li><p><strong>Je préfère être contacté par :</strong>'. $howContactTelephone .','.  $howContactMail .','. $howContactFace . '</li>
+            </ul>
+            <h2>Message:</h2>
+            <p>' . $content . '</p>
+        ';*/
 
         // $mail->AltBody = plain text version of email body;
 
-        if( !$mail->send() ) {
+        // if( !$mail->send() ) {
+        if( !$mail->send(new ContactMail($data)) ) {
             return back()->with("failed", "Email not sent.")->withErrors($mail->ErrorInfo);
         }
 

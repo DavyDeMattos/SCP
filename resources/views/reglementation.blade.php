@@ -1,5 +1,8 @@
 @extends('base')
-@section('title', "La réglementation et la déontologie")
+@section('title', "Agence SCP | Réglementation et Déontologie")
+{{-- TODO Changer description et Keywords --}}
+@section('description', "Agence SCP. Détective privé au service de ses clients")
+@section('keywords', "Détective privé, prestation particulier, prestation entreprise, prestation collectivité")
 
 @section('content')
 <div class="container my-4">

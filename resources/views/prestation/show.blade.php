@@ -1,5 +1,9 @@
 @extends('base')
 @section('title', "Show")
+@section('title', "Agence SCP | " . $prestations[0]->provider_name)
+{{-- TODO Changer description et Keywords --}}
+@section('description', "Agence SCP. Détective privé au service de ses clients")
+@section('keywords', "Détective privé, prestation particulier, prestation entreprise, prestation collectivité")
 
 @section('content')
 <div class="container">

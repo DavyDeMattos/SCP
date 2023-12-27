@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
+    <meta name="description" content=@yield('description')>
+    <meta name="keywords" content=@yield('keywords')>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
 </head>
@@ -96,26 +98,26 @@
                             <label for="timeContact" class="form-label">Quand voulez-vous être contacté ?</label>
                             <div>
                                 <div class="form-check  form-check-inline">
-                                    <input name="timeContactMorning" class="form-check-input" type="checkbox" value="matin" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
+                                    <input name="timeContactMorning" class="form-check-input" type="checkbox" value="matin" id="morningCheck">
+                                    <label class="form-check-label" for="morningCheck">
                                         Matin
                                     </label>
                                 </div>
                                 <div class="form-check  form-check-inline">
-                                    <input name="timeContactAfternoon" class="form-check-input" type="checkbox" value="apres-midi" id="defaultCheck2">
-                                    <label class="form-check-label" for="defaultCheck2">
+                                    <input name="timeContactAfternoon" class="form-check-input" type="checkbox" value="apres-midi" id="afternoonCheck">
+                                    <label class="form-check-label" for="afternoonCheck">
                                         Après-midi
                                     </label>
                                 </div>
                                 <div class="form-check  form-check-inline">
-                                    <input name="timeContactEvening" class="form-check-input" type="checkbox" value="soir" id="defaultCheck3">
-                                    <label class="form-check-label" for="defaultCheck3">
+                                    <input name="timeContactEvening" class="form-check-input" type="checkbox" value="soir" id="eveningCheck">
+                                    <label class="form-check-label" for="eveningCheck">
                                         Soir
                                     </label>
                                 </div>
                                 <div class="form-check  form-check-inline">
-                                    <input name="timeContactNight" class="form-check-input" type="checkbox" value="nuit" id="defaultCheck4">
-                                    <label class="form-check-label" for="defaultCheck4">
+                                    <input name="timeContactNight" class="form-check-input" type="checkbox" value="nuit" id="nightCheck">
+                                    <label class="form-check-label" for="nightCheck">
                                         Nuit
                                     </label>
                                 </div>
@@ -123,20 +125,20 @@
                             <label for="howContact" class="form-label">Mode de contact privilégié</label>
                             <div>
                                 <div class="form-check  form-check-inline">
-                                    <input name="howContactTelephone" class="form-check-input" type="checkbox" value="telephone" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
+                                    <input name="howContactTelephone" class="form-check-input" type="checkbox" value="telephone" id="phoneCheck">
+                                    <label class="form-check-label" for="phoneCheck">
                                         Téléphone
                                     </label>
                                 </div>
                                 <div class="form-check  form-check-inline">
-                                    <input name="howContactMail" class="form-check-input" type="checkbox" value="mail" id="defaultCheck2">
-                                    <label class="form-check-label" for="defaultCheck2">
+                                    <input name="howContactMail" class="form-check-input" type="checkbox" value="mail" id="mailCheck">
+                                    <label class="form-check-label" for="mailCheck">
                                         Mail
                                     </label>
                                 </div>
                                 <div class="form-check  form-check-inline">
-                                    <input name="howContactFace" class="form-check-input" type="checkbox" value="face-a-face" id="defaultCheck3">
-                                    <label class="form-check-label" for="defaultCheck3">
+                                    <input name="howContactFace" class="form-check-input" type="checkbox" value="face-a-face" id="faceCheck">
+                                    <label class="form-check-label" for="faceCheck">
                                         Face-à-face
                                     </label>
                                 </div>

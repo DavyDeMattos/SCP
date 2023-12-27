@@ -1,5 +1,8 @@
 @extends('base')
-@section('title', "Nous contacter")
+@section('title', "Agence SCP | Nous contacter")
+{{-- TODO Changer description et Keywords --}}
+@section('description', "Agence SCP. Détective privé au service de ses clients")
+@section('keywords', "Détective privé, prestation particulier, prestation entreprise, prestation collectivité")
 
 @section('content')
     <h1>Ici la page de contact</h1>
