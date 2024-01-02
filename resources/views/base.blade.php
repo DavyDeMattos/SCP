@@ -82,15 +82,15 @@
                             <div class="row">
                                 <div class="mb-3 col-6">
                                     <label for="inputName" class="form-label"></label>
-                                    <input type="text" name="lastName" class="form-control" id="inputName" placeholder="Votre nom de famille" aria-label="Last name">
+                                    <input type="text" name="lastName" class="form-control" id="inputName" placeholder="Votre nom de famille*" aria-label="Last name" required>
                                 </div>
                                 <div class="mb-3 col-6">
                                     <label for="inputFirstname" class="form-label"></label>
-                                    <input type="text" name="firstName" class="form-control" id="inputFirstname" placeholder="Votre prénom"  aria-label="First name">
+                                    <input type="text" name="firstName" class="form-control" id="inputFirstname" placeholder="Votre prénom*"  aria-label="First name" required>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <input type="email" name="mail" class="form-control" id="inputMail" placeholder="Votre adresse mail" aria-label="E-Mail">
+                                <input type="email" name="mail" class="form-control" id="inputMail" placeholder="Votre adresse mail*" aria-label="E-Mail" required>
                             </div>
                             <div class="mb-3">
                                 <input type="tel" name="phoneNumber" class="form-control" id="inputPhone" placeholder="Votre numéro de téléphone"  aria-label="Phone number">
@@ -151,7 +151,7 @@
                                     <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="15" placeholder="Laissez nous un message"></textarea>
                                 </div>
                             </div>
-                            <button type="submit" class="col-lg-4 col-12 btn bg-primary-subtle btn-lg btn-block">Submit</button>
+                            <button type="submit" class="col-lg-4 col-12 btn bg-primary-subtle btn-lg btn-block">Envoyer</button>
                         </div>
                     </div>
                 </form>

@@ -30,7 +30,7 @@ Route::get('/reglementation', function () {return view('reglementation');})->nam
 Route::get('/actualites', function () {return view('actualites');})->name("actualites");
 // Route::get('/contact', function () {return view('contact');})->name("contact");
 
-Route::get('/test', function (Request $request) {
+/*Route::get('/test', function (Request $request) {
     $prestation = new \App\Models\Prestation();
     $prestation->title = 'Affaires conjugales et familiales';
     $prestation->sub_title = 'Adultère, enquêtes, rapport';
@@ -39,7 +39,7 @@ Route::get('/test', function (Request $request) {
     $prestation->content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laborum inventore ratione praesentium fugit possimus dolorum magni iure enim voluptates!';
     $prestation->save();
     return $prestation;
-});
+});*/
 
 Route::prefix('/prestation')->name('prestation.')->controller(ProviderController::class)->group(function (){
     Route::get('/','index')->name('index');
@@ -64,7 +64,12 @@ Route::prefix('/prestation')->name('prestation.')->controller(PrestationControll
 
 // });
 
-Route::post("/mail/contact", [PHPMailerController::class, "composeEmail"])->name("mail.submit");
+Route::prefix('/mail')->name('mail.')->controller(PHPMailerController::class)->group(function (){
+    Route::post('/contact', 'composeEmail')->name('submit');
+    Route::get('/confirmation', 'showMessage')->name('confirmation');
+});
+// Route::post("/mail/contact", [PHPMailerController::class, "composeEmail"])->name("mail.submit");
+// Route::view('/mail/confirmation', function () {return view('confirmation', $message);})->name("mail-confirmation");
 /*Route::get('/test/create', function (Request $request) {
     $prestations = \App\Models\Prestation::create([
         'title' => 'Enquêtes de moralité',

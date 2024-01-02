@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\View\View;
 use App\Mail\ContactMail;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -88,7 +89,7 @@ class PHPMailerController extends Controller
 
         $mail->isHTML(true);                // Set email content format to HTML
         $mail->Subject = 'Contact via PHPMailer';
-        /*$mail->Body    = '
+        $mail->Body    = '
             <h1>Contact Details:</h1>
             <ul>
                 <li><p><strong>Type de client:</strong> ' . $clientType . '</p></li>
@@ -101,17 +102,31 @@ class PHPMailerController extends Controller
             </ul>
             <h2>Message:</h2>
             <p>' . $content . '</p>
-        ';*/
+        ';
 
         // $mail->AltBody = plain text version of email body;
 
-        // if( !$mail->send() ) {
-        if( !$mail->send(new ContactMail($data)) ) {
-            return back()->with("failed", "Email not sent.")->withErrors($mail->ErrorInfo);
-        }
-
-        else {
-            return back()->with("success", "Email has been sent.");
+        if( !$mail->send() ) {
+        // if( !$mail->send(new ContactMail($data)) ) {
+            return back()->with("failed", "Email not sent.")->withInput()->withErrors($mail->ErrorInfo)->$this->showMessage("Votre mail n'a pas été correctement envoyé");
+        } else {
+            // return redirect()->route('mail-confirmation', ['message' => 'Votre mail a bien été envoyé']);
+            // echo "Youpi mail envoyé";
+            return $this->showMessage('Votre mail a bien été envoyé');
+            // return back()->with("success", "Email has been sent.");
         }
     }
+    // =============== [ Message ] ===================
+    /**
+     * Fonction pour afficher un message de confirmation
+     *
+     * @param string $message
+     * @return view
+     */
+    public function showMessage(string $message): View {
+        return view("mail.confirmation", [
+            'message' => $message,
+        ]);
+    }
+
 }

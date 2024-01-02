@@ -28,9 +28,11 @@ Projet de site internet demandé par l'agence SCP pour présenter son agences, s
       - [ ]  En dur ?
   - [ ] Formulaire de contact
     - [x] Incorporer formulaire dans "footer"
-    - [ ] Formulaire fonctionnelle + envoi d'un mail
+    - [x] Formulaire fonctionnelle + envoi d'un mail
     - [ ] S'assurer de la protection (injection SQL toussa toussa)
-  - [ ] Augmenter taille logo
+    - [ ] Page de transition (réussite ou échec)
+    - [ ] Template pour le mail
+  - [x] Augmenter taille logo
   - [ ] Police d'écriture pour les titres -> **ITC bauhaus bold**
   - [ ] CGU
   - [ ] Mentions légales

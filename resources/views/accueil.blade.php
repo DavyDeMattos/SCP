@@ -17,8 +17,8 @@
         <div class="row justify-content-md-center ">
             <div class="col-md-4 col-sm-12 mb-3">
                 <div class="card mx-auto">
-                    <img src="https://i0.wp.com/assotgb.org/wp-content/uploads/2018/09/particulier_icon_circular.png?w=512&ssl=1" class="card-img-top" alt="Photo représentant les particuliers">
-                    <div class="card-body">
+                    <img src="https://i0.wp.com/assotgb.org/wp-content/uploads/2018/09/particulier_icon_circular.png?w=512&ssl=1" class="card-img-top m-auto card-img-client h-50" alt="Photo représentant les particuliers" style="max-width: fit-content; max-height: 250px;">
+                    <div class="card-body h-50">
                       <h3 class="card-title">Particulier</h3>
                       <p class="card-text">Si vous êtes un particulier, vous êtes concerné par cette section.</p>
                       <a href="{{route("prestation.show", [ "slug" => "particulier" ])}}" class="btn btn-primary">Aller voir les prestations</a>
@@ -27,8 +27,8 @@
             </div>
             <div class="col-md-4 col-sm-12 mb-3">
                 <div class="card mx-auto">
-                    <img src="https://www.lafrancequiose.fr/wp-content/uploads/2021/12/presentation-d-entreprise-1024x571.jpg" class="card-img-top" alt="Photo représentant les entreprises">
-                    <div class="card-body">
+                    <img src="https://www.lafrancequiose.fr/wp-content/uploads/2021/12/presentation-d-entreprise-1024x571.jpg" class="card-img-top m-auto card-img-client h-50" alt="Photo représentant les entreprises" style="max-width: fit-content; max-height: 250px;">
+                    <div class="card-body h-50">
                       <h3 class="card-title">Entreprise</h3>
                       <p class="card-text">Si vous êtes une entreprise, vous êtes concerné par cette section.</p>
                       <a href="{{route("prestation.show", [ "slug" => "entreprise" ])}}" class="btn btn-primary">Aller voir les entreprises</a>
@@ -37,8 +37,8 @@
             </div>
             <div class="col-md-4 col-sm-12 mb-3">
                 <div class="card mx-auto">
-                    <img src="https://www.point-comm.fr/images/point_comm/metier-consultant-collectivite-locale.jpg" class="card-img-top" alt="Photo représentant les collectivités">
-                    <div class="card-body">
+                    <img src="https://www.point-comm.fr/images/point_comm/metier-consultant-collectivite-locale.jpg" class="card-img-top m-auto card-img-client h-50" alt="Photo représentant les collectivités" style="max-width: fit-content; max-height: 250px;">
+                    <div class="card-body h-50">
                       <h3 class="card-title">Collectivités</h3>
                       <p class="card-text">Si vous êtes une collectivité, vous êtes concerné par cette section.</p>
                       <a href="{{route("prestation.show", [ "slug" => "collectivite" ])}}" class="btn btn-primary">Aller voir les collectivités</a>
@@ -91,3 +91,4 @@
           </div>
     </div>
 @endsection
+
